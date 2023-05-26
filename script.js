@@ -16,14 +16,14 @@ function rot13(encodedStr){
 	for(let i=0;i<encodedStr.length;i++){
 		if(lookup[encodedStr[i]]===undefined)
 		{
-			decodedArr.push(encodedStr[i]);
+			decodedArr[i]=encodedStr[i];
 		}
 		else{
-			decodedArr.push(lookup[encodedStr[i]]);
+			decodedArr[i]=lookup[encodedStr[i]];
 		}
 	}
 
-  return decodedArr;//return decodedArr
+  return decodedArr.join("");//return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
